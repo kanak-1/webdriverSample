@@ -12,7 +12,7 @@ public class GooglePageTest {
 		driver.manage().window().maximize();
 		driver.navigate().to("https://www.google.com/");
 		WebElement srcBox=driver.findElement(By.id("APjFqb"));
-		srcBox.sendKeys("Java Tutorial");
+		srcBox.sendKeys("Java Tutorial Advance");
 		srcBox.sendKeys(Keys.ENTER);
 		String strTitle=driver.getTitle();
 		System.out.println("Page Title-" + strTitle );
