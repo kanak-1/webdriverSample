@@ -10,12 +10,22 @@ public class GooglePageTest {
 	public static void main(String[] args) {
 		WebDriver driver=new ChromeDriver();	
 		driver.manage().window().maximize();
-		driver.navigate().to("https://www.google.com/");
-		WebElement srcBox=driver.findElement(By.id("APjFqb"));
-		srcBox.sendKeys("Java Tutorial Advance");
-		srcBox.sendKeys(Keys.ENTER);
-		String strTitle=driver.getTitle();
-		System.out.println("Page Title-" + strTitle );
+//		driver.navigate().to("https://www.google.com/");
+//		WebElement srcBox=driver.findElement(By.id("APjFqb"));
+//		srcBox.sendKeys("Java Tutorial Advance");
+//		srcBox.sendKeys(Keys.ENTER);
+//		String strTitle=driver.getTitle();
+//		System.out.println("Page Title-" + strTitle );
+		driver.navigate().to("https://the-internet.herokuapp.com/login");
+	//driver.findElement(By.id("username")).sendKeys("tomsmith");
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("tomsmith");
+		//driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("SuperSecretPassword!");
+		//driver.findElement(By.className("radius")).click();
+		driver.findElement(By.xpath("//button[@class='radius']")).click();
+		
+		
+		
 	}
 
 }
