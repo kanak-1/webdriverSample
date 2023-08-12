@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class GooglePageTest {
 	public static void main(String[] args) {
 		//my token = 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
+		//my new token for practice=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
 		WebDriver driver=new ChromeDriver();	
 		driver.manage().window().maximize();
 		//driver.get("https://www.google.com/");		
