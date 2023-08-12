@@ -17,8 +17,9 @@ public static void main(String[] args) {
 	//driver.findElement(By.xpath("//input[@name='username']")).sendKeys("tomsmith");
 	driver.findElement(By.xpath("//input[@id='username' and @type='text']")).sendKeys("tomsmith");
 	driver.findElement(By.xpath("//input[@id='password']")).sendKeys("SuperSecretPassword!");
-	driver.findElement(By.xpath("//button[@class='radius']")).click();
-	//driver.findElement(By.xpath("//i[@class='fa fa-2x fa-sign-in']")).click();
+	//driver.findElement(By.xpath("//button[@class='radius']")).click();
+	//driver.findElement(By.xpath("//i[@class='fa fa-2x fa-sign-in']")).click(); //used for compound class9having more than 1 class0
+	driver.findElement(By.cssSelector(".fa.fa-2x.fa-sign-in")).click();
 	//driver.findElement(By.linkText("Elemental Selenium")).click();
 	//driver.findElement(By.partialLinkText("Selenium")).click();
 	//Absolute xpath of user name input field=/html/body/div[2]/div/div/form/div[1]/div/input
