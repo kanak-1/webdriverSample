@@ -9,11 +9,12 @@ public static void main(String[] args) {
 	WebDriver driver=new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.get("https://the-internet.herokuapp.com/login");
-	//driver.findElement(By.linkText("Elemental Selenium")).click();
-	//driver.findElement(By.partialLinkText("Selenium")).click();
 	driver.findElement(By.id("username")).sendKeys("tomsmith");
 	driver.findElement(By.name("password")).sendKeys("SuperSecretPassword!");
-	driver.findElement(By.className("radius")).click();
-	//fsdfsdfsdf
+	//driver.findElement(By.className("radius")).click();
+	driver.findElement(By.tagName("button")).click();
+	//driver.findElement(By.linkText("Elemental Selenium")).click();
+	//driver.findElement(By.partialLinkText("Selenium")).click();
+	
 }
 }
