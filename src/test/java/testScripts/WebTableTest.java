@@ -3,8 +3,11 @@ package testScripts;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.openqa.selenium.support.locators.RelativeLocator.with;
+
+import java.util.List;
 
 public class WebTableTest {
 	public static void main(String[] args) {
@@ -21,9 +24,15 @@ public class WebTableTest {
 				.getText();
 		System.out.println("Position is" + position);
 		//driver.findElement(with(By.tagName("td")).toLeftOf(By.xpath("//td[contains(text(),'B.Wagner')]"))).getText();
-				
-
+		List<WebElement> empList=driver.findElements(By.xpath("//td[contains(text(),'San Francisco')]//preceding-sibling::td[2]"));
+		System.out.println("No. of Employees working in San Francisco=" + empList.size());
+		System.out.println("Name of Employee working in San Francisco:" );
+		for(int i=0;i<empList.size();i++) {
+			
+			System.out.println(empList.get(i).getText());
+		}
 		
+
 		//hidden element-- https://automationbookstore.dev/  -- isDisplayed()-- boolean type
 	}
 
