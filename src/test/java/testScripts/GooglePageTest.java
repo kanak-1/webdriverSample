@@ -47,7 +47,7 @@ public class GooglePageTest {
 //		driver.findElement(By.className("radius")).click();
 //		driver.findElement(By.xpath("//button[@class='radius']")).click();
 		
-		driver.close();
+//		driver.close();
 		
 	}
 
