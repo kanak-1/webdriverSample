@@ -1,5 +1,6 @@
 package testScripts;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class GooglePageTest {
 		//my new token for practice=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
 		//new token=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
 		WebDriver driver=new ChromeDriver();	
+		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
 		driver.manage().window().maximize();
 		//driver.get("https://www.google.com/");		
 		driver.navigate().to("https://www.google.com/");
@@ -23,7 +25,7 @@ public class GooglePageTest {
 		//WebElement srcBox=driver.findElement(By.tagName("textarea"));
 		WebElement srcBox=driver.findElement(By.className("gLFyf"));
 		srcBox.sendKeys("Java Tutorial");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		List<WebElement> items=driver.findElements(By.xpath("(//ul[@class='G43f7e'])[1]//li//descendant::div[@class='wM6W7d']"));
 		System.out.println("No. of items=" + items.size());
 		for(int i=0;i<items.size();i++) {
